@@ -1,0 +1,8 @@
+dev/ifrs/interfaceadapters/user/repository/entity/UserEntity.class
+dev/ifrs/usecase/user/UseCase.class
+dev/ifrs/interfaceadapters/user/controller/UserController.class
+dev/ifrs/usecase/user/UseCaseInterface.class
+dev/ifrs/interfaceadapters/user/controller/UserControllerInterface.class
+dev/ifrs/web/user/WS.class
+dev/ifrs/model/User.class
+dev/ifrs/GreetingResource.class
