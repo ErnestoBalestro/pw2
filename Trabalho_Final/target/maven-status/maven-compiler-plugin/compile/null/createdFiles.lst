@@ -1,0 +1,7 @@
+dev/pw2/model/User.class
+dev/pw2/model/Message.class
+dev/pw2/ChannelWS.class
+dev/pw2/UserWS.class
+META-INF/panache-archive.marker
+dev/pw2/MessageWS.class
+dev/pw2/model/Channel.class
