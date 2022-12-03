@@ -1,6 +1,6 @@
-/home/pw2/dev/pw2/exemplos/hibernate/src/main/java/dev/pw2/MessageWS.java
-/home/pw2/dev/pw2/exemplos/hibernate/src/main/java/dev/pw2/model/Channel.java
-/home/pw2/dev/pw2/exemplos/hibernate/src/main/java/dev/pw2/model/Message.java
-/home/pw2/dev/pw2/exemplos/hibernate/src/main/java/dev/pw2/ChannelWS.java
-/home/pw2/dev/pw2/exemplos/hibernate/src/main/java/dev/pw2/model/User.java
-/home/pw2/dev/pw2/exemplos/hibernate/src/main/java/dev/pw2/UserWS.java
+/home/pw2/Desktop/Trabalho_Final/src/main/java/dev/pw2/model/Produto.java
+/home/pw2/Desktop/Trabalho_Final/src/main/java/dev/pw2/MercadoWS.java
+/home/pw2/Desktop/Trabalho_Final/src/main/java/dev/pw2/UserWS.java
+/home/pw2/Desktop/Trabalho_Final/src/main/java/dev/pw2/model/User.java
+/home/pw2/Desktop/Trabalho_Final/src/main/java/dev/pw2/model/Mercado.java
+/home/pw2/Desktop/Trabalho_Final/src/main/java/dev/pw2/ProdutoWS.java

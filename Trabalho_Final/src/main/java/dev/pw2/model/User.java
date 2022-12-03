@@ -32,11 +32,11 @@ public class User extends PanacheEntity {
     // name = nome da coluna que irá armazenar a chave estrangeira
     // na tabela Message (solução a partir da JPA 2)
     @JoinColumn(name = "user_id")
-    private List<Message> messages;
+    private List<Mercado> messages;
 
     @ManyToMany(cascade = CascadeType.ALL)
     @JsonBackReference
-    private List<Channel> channels;
+    private List<Produto> channels;
 
     public User() {
         this.messages = new ArrayList<>();
@@ -51,28 +51,31 @@ public class User extends PanacheEntity {
         this.name = name;
     }
 
-    public List<Message> getMessages() {
+    public List<Mercado> getMessages() {
         return messages;
     }
 
-    public void setMessages(List<Message> messages) {
+    public void setMessages(List<Mercado> messages) {
         this.messages = messages;
     }
 
-    public void addMessage(Message message) {
+    public void addMessage(Mercado message) {
         this.messages.add(message);
     }
 
-    public List<Channel> getChannels() {
+    public List<Produto> getChannels() {
         return channels;
     }
 
-    public void setChannels(List<Channel> channels) {
+    public void setChannels(List<Produto> channels) {
         this.channels = channels;
     }
 
-    public void addChannel(Channel channel) {
+    public void addChannel(Produto channel) {
         this.channels.add(channel);
+    }
+
+    public void addProduto(Produto produto) {
     }
 
 }
