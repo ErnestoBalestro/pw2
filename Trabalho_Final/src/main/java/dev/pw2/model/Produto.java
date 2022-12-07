@@ -31,7 +31,7 @@ public class Produto extends PanacheEntity {
     // @ManyToMany(mappedBy = "channels", fetch = FetchType.EAGER)
     @ManyToMany(mappedBy = "produtos", fetch = FetchType.EAGER)
     @JsonManagedReference
-    private List<User> users;
+    private List<Utils> users;
 
     public Produto() {
         this.users = new ArrayList<>();
