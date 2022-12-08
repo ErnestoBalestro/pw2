@@ -14,14 +14,28 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+import javax.persistence.Table;
 
 import io.quarkus.hibernate.orm.panache.PanacheEntity;
 
 @Entity
+@Table (name="mercado")
 public class Mercado extends PanacheEntity {
 
+    @Id
+    @GeneratedValue
+    @Column(name="text")
     private String text;
+
+    @ManyToMany()
+    public Long getId() {
+        return id;
+    }
 
     public String getText() {
         return text;

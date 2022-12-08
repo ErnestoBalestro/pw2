@@ -22,19 +22,21 @@ import java.text.DecimalFormatSymbols;
 @Entity
 public class Utils extends PanacheEntity {
 
+    private Double value;
+
     static NumberFormat numberFormat = 
     //new DecimalFormat(s: "R$ #, ##0.00", new DecimalFormatSymbols(new locale(s: "pt", s1: "BR")));
     new DecimalFormat("R$ #, ##0.00", new DecimalFormatSymbols(new Locale("pt", "BR")));
 
     public static String doubleToString(Double value) {
-    return numberFormat.format(value);
+        return numberFormat.format(value);
     }
 
     public void setValue(Double value) {
-
+        this.value = value;
     }
 
     public void setnumberFormat(Double numberFormat) {
-
     }
+
 }

@@ -11,27 +11,54 @@ package dev.pw2.model;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import javax.persistence.ManyToMany;
+import javax.persistence.Table;
+
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import io.quarkus.hibernate.orm.panache.PanacheEntity;
 
 //Modelo
 
 @Entity
+@Table (name="produto")
 public class Produto extends PanacheEntity {
 
-    private String hash;
     private static int count = 1;
     //private int id;
+
+
+    @Id
+    @GeneratedValue
+    @Column(name="hash")
+    private String hash;
+    @Column(name="id")
+    private Long id;
+    @Column (name="nome")
     private String nome;
+    @Column (name="preco")
     private Double preco;
+
+
 
     // @ManyToMany(mappedBy = "channels", fetch = FetchType.EAGER)
     @ManyToMany(mappedBy = "produtos", fetch = FetchType.EAGER)
     @JsonManagedReference
     private List<Utils> users;
+
+    @ManyToMany()
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(long id){
+        this.id = id;
+    }
 
     public Produto() {
         this.users = new ArrayList<>();
@@ -46,14 +73,6 @@ public class Produto extends PanacheEntity {
 
     public void setHash(String hash) {
         this.hash = hash;
-    }
-
-    public Long getId(){
-        return id;
-    }
-
-    public void setId(long id){
-        this.id = id;
     }
 
     public String getNome(){
